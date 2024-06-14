@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú Desplegable</title>
+  <link rel="stylesheet" href="styles.css">
+ 
+</head>
+<body>
+
+<div class="sidebar">
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-btn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  
+  <ul class="menu">
+    <li><a href="#">Inicio</a></li>
+    <li><a href="#" id="report-link">Reporte</a></li>
+    <li><a href="#">Ayuda</a></li>
+    <li><a href="#">Notificaciones</a></li>
+  </ul>
+</div>
+
+<script>
+  // JavaScript para redirigir al hacer clic en el enlace de reporte
+  document.getElementById('report-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Previene el comportamiento predeterminado del enlace (por si acaso)
+    window.location.href = 'ruta/de/la/página/de/reporte'; // Reemplaza con la URL a la que quieres redirigir
+  });
+</script>
+
+</body>
+</html>
